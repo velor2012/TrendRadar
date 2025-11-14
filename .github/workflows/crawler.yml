@@ -70,6 +70,7 @@ jobs:
       - name: screenshot
         run: |
           curl localhost:8000 &
+          playwright install &
           python save_img.py
 
       - name: Commit and push if changes
