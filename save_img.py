@@ -19,7 +19,7 @@ def test_button_click():
             # 方式1：通过ID定位并点击按钮
             page.wait_for_selector(".save-btn", state="visible")
 
-                    # 重要：使用 expect_download() 监听下载
+            # 重要：使用 expect_download() 监听下载
             with page.expect_download() as download_info:
                 page.click(".save-btn")  # 触发下载的按钮
 
