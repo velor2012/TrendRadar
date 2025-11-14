@@ -69,7 +69,7 @@ jobs:
           sleep 2 # 等待服务器启动
       - name: install playwright
         run: |
-          playwright install &
+          playwright install &&
           apt install ttf-wqy-zenhei  fonts-wqy-microhei -y
         
       - name: screenshot
