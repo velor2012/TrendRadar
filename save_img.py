@@ -4,7 +4,7 @@ def test_button_click():
     """测试点击HTML页面中的按钮"""
     with sync_playwright() as p:
         # 启动浏览器（无头模式适合CI环境）
-        browser = p.chromium.launch(headless=True, downloads_path=".")  # 设置默认下载目录)
+        browser = p.chromium.launch(headless=True)  # 设置默认下载目录)
         context = browser.new_context(
             accept_downloads=True  # 必须启用
         )
