@@ -67,10 +67,12 @@ jobs:
         run: |
           python3 -m http.server 8000 &
           sleep 2 # 等待服务器启动
+      - name: install playwright
+        run: playwright install 
+        
       - name: screenshot
         run: |
           curl localhost:8000 &
-          playwright install &
           python save_img.py
 
       - name: Commit and push if changes
