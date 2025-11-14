@@ -63,6 +63,12 @@ jobs:
           NTFY_TOKEN: ${{ secrets.NTFY_TOKEN }}
           GITHUB_ACTIONS: true
         run: python main.py
+      - name: laugth http server
+        run: |
+          python3 -m http.server 8000 &
+          sleep 2 # 等待服务器启动
+      - name: screenshot
+        run: curl localhost:8000
 
       - name: Commit and push if changes
         run: |
