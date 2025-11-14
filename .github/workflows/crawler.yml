@@ -70,7 +70,8 @@ jobs:
       - name: install playwright
         run: |
           playwright install &&
-          apt install ttf-wqy-zenhei  fonts-wqy-microhei -y
+          playwright install-deps
+          # apt install ttf-wqy-zenhei  fonts-wqy-microhei -y
         
       - name: screenshot
         run: |
